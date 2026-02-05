@@ -1,10 +1,12 @@
 <template>
-    <div>
-Тело
-    </div>
+    <main>
+<MainBanner/>
+</main>
 </template>
 
 <script setup>
+import MainBanner from '../sections/MainBanner.vue';
+
 
 </script>
 

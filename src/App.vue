@@ -1,7 +1,9 @@
 <template>
-<MyHeader/>
+  <div class="body">
+<MyHeader class="header"/>
 <MyMain/>
 <MyFooter/>
+</div>
 </template>
 
 <script setup>

@@ -1,10 +1,11 @@
 <template>
     <div>
-Шапка
+<NavBar/>
     </div>
 </template>
 
 <script setup>
+import NavBar from '../sections/NavBar.vue';
 
 </script>
 
