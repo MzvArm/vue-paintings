@@ -1,12 +1,8 @@
 <template>
- <header class="nav-bar">
-    <div class="nav-logo">
-        <img src="/public/logo.svg" alt="лого в виде звезды" title="звезда">
-        
-        <div>Ink. House</div>
+ <header class="header">
+ <div class="nav-bar">
 
-    </div>
-
+    <MyLogo class="nav-logo"/>
 
     <div class="nav-menu">
       <div class="">Репродукции</div>
@@ -14,11 +10,12 @@
       <div class="">О нас</div>
       <img class="img-basket" src="/public/shopping-cart.svg" alt="Корзина" title="Заказы">
     </div>
-
+</div>
  </header>
 </template>
 
 <script setup>
+import MyLogo from '../MyLogo.vue';
 import MyBasket from './MyBasket.vue';
 </script>
 
@@ -32,24 +29,9 @@ import MyBasket from './MyBasket.vue';
 }
 
 .nav-logo {
-    display: flex;
-    column-gap: 8px;
-    align-self: center;
-    padding: 33px 495px 32px 165px;
 
+padding: 33px 495px 32px 165px;
 
-    div {
-
-        align-self: center;
-        font-weight: 700;
-
-    }
-
-    img {
-
-        height: 35px;
-        width: 35px;
-    }
 }
 
 .nav-menu {

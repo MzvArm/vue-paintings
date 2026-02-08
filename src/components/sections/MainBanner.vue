@@ -4,7 +4,7 @@
         <img class="banner-img" src="/src/assets/main-banner.jpg" alt="Картина" title="Картина с птицей">  
 
         <div class="banner-subscription">
-            <div class="banner-title">Реплики картин от <span>Ink. House</span></div>
+            <h1 class="banner-title">Реплики картин от <span>Ink. House</span></h1>
             <div class="banner-text">Высокое качество отрисовки на плотной бумаге или льняном холсте. Редкие произведения, доступные цены.</div>
             <button type="button" class="banner-button">Продукция</button>
         </div>
@@ -22,7 +22,7 @@
 
 .banner {
     display: flex;
-    margin: 0 auto; 
+    margin: 0 auto 70px; 
     width: 1440px;
 
     &-img {

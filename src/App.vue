@@ -1,9 +1,7 @@
 <template>
-  <div class="body">
-<MyHeader class="header"/>
+<MyHeader/>
 <MyMain/>
 <MyFooter/>
-</div>
 </template>
 
 <script setup>
@@ -13,12 +11,6 @@ import MyFooter from './components/blocks/MyFooter.vue';
 </script>
 
 <style lang="scss" scoped>
-@use "./styles/main.scss" as *;
-
-.container {
-  font-size: 20px;
-  color: black;
-  width: 1440px;
-}
+// @use "./styles/main.scss" as *;
 
 </style>
