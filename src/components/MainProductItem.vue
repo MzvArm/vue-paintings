@@ -1,17 +1,25 @@
 <template>
     <div class="item">
         <div class="item-wrapper">
-            <img class="item-img" src="" alt="">
-            <div class="item-author">Автор</div>
-            <div class="item-name">Название</div>
-            <div class="item-details">Детали</div>
-            <div class="item-price">Цена</div>
+            <img class="item-img" :src="item.img" alt="">
+            <div class="item-author">{{  item.author  }}</div>
+            <div class="item-name">{{ item.name}}</div>
+            <div class="item-details">{{item.details}}</div>
+            <div class="item-price">{{item.price}} руб</div>
             <button class="item-button">В корзину</button>
         </div>
     </div>
 </template>
 
 <script setup>
+
+const props = defineProps({
+    item: {
+        type: Object,
+        required: true
+    }
+})
+
 
 </script>
 
@@ -51,7 +59,7 @@
 
         color: $main-black;
         font-size: 30px;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
 
     }
 

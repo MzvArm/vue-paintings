@@ -8,12 +8,12 @@
                 <button class="england">Англия</button>
             </div>
         </div>
-        <MainProductItem/>
+        <FranceItems/>
     </div>
 </template>
 
 <script setup>
-import MainProductItem from '../MainProductItem.vue';
+import FranceItems from '../pages/FranceItems.vue';
 
 
 </script>

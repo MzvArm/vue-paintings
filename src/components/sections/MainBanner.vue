@@ -1,7 +1,7 @@
 <template>
     <section class="banner">
 
-        <img class="banner-img" src="/src/assets/main-banner.jpg" alt="Картина" title="Картина с птицей">  
+        <img class="banner-img" src="/src/assets/main-banner.webp" alt="Картина" title="Картина с птицей">  
 
         <div class="banner-subscription">
             <h1 class="banner-title">Реплики картин от <span>Ink. House</span></h1>
@@ -43,7 +43,7 @@
     }
 
     &-button {
-        background-color: #fff;
+        background-color: transparent;
         border: $main-green 1px solid;
         color: $main-green;
         font-size: $big-text;
