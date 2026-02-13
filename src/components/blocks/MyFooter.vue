@@ -5,7 +5,7 @@
                 <MyLogo class="footer-logo"/>
                 <div class="footer-contacts">
                     <a href="tel:+70000000000">+7 (000) 000-00-00</a>
-                    <adress> г. Краснодар, <br>ул. Инкхаусовская 15 </adress>
+                    <address> г. Краснодар, <br>ул. Инкхаусовская 15 </address>
                 </div>
             </div>
 

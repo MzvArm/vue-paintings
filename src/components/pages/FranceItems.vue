@@ -1,9 +1,8 @@
 <template>
 
-<div class="france-items">
-<MainProductItem :item="item" v-for="item in france"/>
-</div>
-
+    <div class="products-items">
+        <MainProductItem :item="item" v-for="item in france" :key="item.name"/>
+    </div>
 </template>
 
 <script setup>
@@ -35,14 +34,15 @@ const france = [
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
-.france-items {
+  .products-items {
 
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2,auto);
     gap: 30px;
-}
+
+    }
 
 </style>
