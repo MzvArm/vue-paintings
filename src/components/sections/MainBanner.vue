@@ -6,7 +6,8 @@
         <div class="banner-subscription">
             <h1 class="banner-title">Реплики картин от <span>Ink. House</span></h1>
             <div class="banner-text">Высокое качество отрисовки на плотной бумаге или льняном холсте. Редкие произведения, доступные цены.</div>
-            <button type="button" class="banner-button">Продукция</button>
+            <!-- <button type="button" class="banner-button">Продукция</button> -->
+            <router-link to="#products" class="banner-button">Продукция</router-link>
         </div>
 
       </section>

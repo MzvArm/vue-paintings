@@ -1,23 +1,37 @@
 <template>
-    <div class="products">
+    <section class="products">
         <div class="products-header">
             <h2 class="products-title">Репродукции</h2>
             <div class="products-navigation">
-                <router-link to="/" class="button">Франция</router-link>
-                <router-link to="/Germany" class="button">Германия</router-link>
-                <router-link to="/England" class="button">Англия</router-link>
+
+                <!-- Добавляем кнопки для пагинации, подсвечиваем актуальную страницу -->
+
+                <router-link to="/" class="button" :class="{ 'current-button': route.path == '/'}">Франция</router-link>
+                <router-link to="/Germany" class="button" :class="{ 'current-button': route.path == '/Germany'}">Германия</router-link>
+                <router-link to="/England" class="button" :class="{ 'current-button': route.path == '/England'}">Англия</router-link>
             </div>
         </div>
 
-            <router-view v-slot="{ Component }">
+        <!--Используем специальную конструкцию для плавного перехода между страницами -->
+
+            <router-view id="products" v-slot="{ Component }">
               <transition name="slide-fade">
                <component :is="Component" />
               </transition>
             </router-view>
-    </div>
+    </section>
 </template>
 
 <script setup>
+import { useRoute } from 'vue-router';
+import { computed } from 'vue';
+
+const route = useRoute()
+
+// Получаем текущий путь
+
+const currentPath = computed(() => route.path)
+ 
 
 </script>
 
@@ -64,6 +78,23 @@ column-gap: 32px;
         border-radius: 55px;
         border: none;
         background-color: $middle-green;
+
+    }
+
+    .button:hover {
+        transition: 0.5s;
+        transform: scale(1.1);
+    }
+
+    .current-button {
+
+        color: $main-white;
+        background-color: $button-green;
+    }
+
+    .current-button:hover {
+
+        transform: none;
 
     }
 

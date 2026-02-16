@@ -132,6 +132,12 @@ table {
 
 button {
     font-family: 'Raleway', sans-serif;
-    background-color: none;
+    background-color: transparent;
     border: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #2C2D35;
 }

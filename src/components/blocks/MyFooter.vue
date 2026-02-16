@@ -11,15 +11,15 @@
 
             <div class="footer-navigation">
 
-               <div class="footer-paintings">
+               <nav class="footer-paintings">
             
                   <div class="footer-sections">Репродукции</div>
-                  <div class="">Франция</div>
-                  <div class="">Германия</div>
-                  <div class="">Англия</div>
+                  <router-link to="/#products">Франция</router-link>
+                  <router-link to="/Germany#products">Германия</router-link>
+                  <router-link to="/England#products">Англия</router-link>
             
             
-            </div>
+            </nav>
 
             <div class="footer-news">
 
@@ -132,6 +132,17 @@ import MyLogo from '../MyLogo.vue';
         color: $main-gray;
         line-height: 1.5;
         padding: 23px 248px 23px 0;
+    }
+
+    &-paintings {
+        display: flex;
+        flex-direction: column;
+
+        a {
+            color: $main-gray;
+
+        }
+
     }
 
     &-sections {

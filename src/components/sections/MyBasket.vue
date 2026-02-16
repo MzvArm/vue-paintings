@@ -1,9 +1,22 @@
 <template>
     <Transition name="modal">
     <div class="modal-background" v-if="show">
-        <div class="modal-box">
-            <button @click="$emit('close')">close</button>
-        </div>
+        <section class="modal-box">
+            <header class="modal-header">           
+             <h2>Ваш заказ</h2>
+             <button @click="$emit('close')">
+                <img class="modal-close-btn" src="/public/close-btn.svg" alt="">
+             </button>
+            </header>
+            <div class="modal-main">
+            <OrderItems/>
+              
+            </div>
+            <footer class="modal-footer">
+            <div>Итого:</div>
+            <button>Оплатить</button>
+            </footer>
+        </section>
 
     </div>
     </Transition>
@@ -22,6 +35,8 @@
 </script>
 
 <style lang="scss" scoped>
+
+@use "/src/styles/variables" as *;
 
 .modal-background {
     position: fixed;
@@ -58,6 +73,27 @@
 .modal-leave-to .modal-container {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+.modal-header {
+
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid $main-green;
+
+}
+
+
+.modal-close-btn {
+
+    width: 20px;
+    height: 20px;
+}
+
+.modal-footer {
+  display: flex;
+  border-top: 2px solid $main-green;
+
 }
 
 

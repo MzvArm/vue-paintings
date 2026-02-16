@@ -4,16 +4,16 @@
 
     <MyLogo class="nav-logo"/>
 
-    <div class="nav-menu">
-      <div class="">Репродукции</div>
-      <div class="">Новинки</div>
-      <div class="">О нас</div>
+    <nav class="nav-menu">
+      <router-link to="#products">Репродукции</router-link>
+      <router-link to="#new-banner">Новинки</router-link>
+       <router-link to="#about-us">О нас</router-link>
       <div class="basket-wrapper">
       <button class="basket-button" @click="show=!show">
          <img class="basket-img" src="/public/shopping-cart.svg" alt="Корзина" title="Заказы">
       </button>
       </div>
-    </div>
+    </nav>
     <MyBasket :show @close="show=false"/>
 </div>
  </header>
@@ -63,7 +63,7 @@ padding: 33px 485px 32px 165px;
     position: absolute;
     right: 45px;
     top: 28px;
-    height: 230vw;    
+    height: 3500px;    
 
 }
 

@@ -1,5 +1,5 @@
 <template>
-    <section class="about-us">
+    <section id="about-us" class="about-us">
         
         <img class="about-us-img" src="/src/assets/about-us-pic.webp" alt="Изображение с рамкой" title="Рука дерижт кисточки на фоне рамки">
         <div class="about-us-description">

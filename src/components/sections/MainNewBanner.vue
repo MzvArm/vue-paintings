@@ -1,5 +1,5 @@
 <template>
-    <section class="new-banner">
+    <section id="new-banner" class="new-banner">
         <div class="new-banner-wrapper">
             <div class="new-banner-header">
                 <img class="new-banner-logo" src="/public/yellow-star.svg" alt="лого" title=" жёлтая звезда">

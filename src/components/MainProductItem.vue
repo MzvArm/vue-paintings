@@ -6,7 +6,7 @@
             <div class="item-name">{{ item.name}}</div>
             <div class="item-details">{{item.details}}</div>
             <div class="item-price">{{item.price}} руб</div>
-            <button class="item-button">В корзину</button>
+            <!-- <button @click="addOrder(item)" class="item-button">В корзину</button> -->
         </div>
     </div>
 </template>
@@ -19,6 +19,15 @@ const props = defineProps({
         required: true
     }
 })
+
+// const orders = []
+
+// function addOrder(item) {
+//     const orders = []
+//     orders.push(item)
+//     console.log(item)
+//     console.log(orders)
+// }
 
 
 </script>
