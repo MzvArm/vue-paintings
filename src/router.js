@@ -33,6 +33,7 @@ const router = createRouter({
             history.replaceState({}, "", location.pathname)
 
             return {
+                
                 el: to.hash,
                 top: 100,
                 behavior: 'smooth'

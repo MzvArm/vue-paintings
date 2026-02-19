@@ -15,7 +15,7 @@
         <!--Используем специальную конструкцию для плавного перехода между страницами -->
 
             <router-view id="products" v-slot="{ Component }">
-              <transition name="slide-fade">
+              <transition name="slide-fade" mode="out-in">
                <component :is="Component" />
               </transition>
             </router-view>

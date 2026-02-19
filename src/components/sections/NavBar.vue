@@ -11,6 +11,7 @@
       <div class="basket-wrapper">
       <button class="basket-button" @click="show=!show">
          <img class="basket-img" src="/public/shopping-cart.svg" alt="Корзина" title="Заказы">
+        <div class="notifications" v-if="ordersLength > 0">{{ ordersLength }}</div>
       </button>
       </div>
     </nav>
@@ -22,10 +23,16 @@
 <script setup>
 import MyLogo from '../MyLogo.vue';
 import MyBasket from './MyBasket.vue';
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
+import { useBasketStore } from '@/basketStore';
+
+const ordersLength = computed(() => {
+return useBasketStore().orders.length
+})
+
+
 
 const show = ref(false)
-
 
 </script>
 
@@ -80,6 +87,16 @@ padding: 33px 485px 32px 165px;
     height: 24px;
     width: 24px;
 
+}
+
+.notifications {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 3px;
+    border-radius: 7px;
+    background-color: $main-white;
+    font-size: 10px;
 }
 
 

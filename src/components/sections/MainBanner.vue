@@ -50,6 +50,12 @@
         font-size: $big-text;
         font-family: $font;
         padding: 21px 60px;
+        transition: all 0.3s ease;
+
+            &:active {
+            color: $light-green;
+            background-color: $main-green;
+        }
     }
 
 }

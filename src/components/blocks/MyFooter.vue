@@ -18,7 +18,6 @@
                   <router-link to="/Germany#products">Германия</router-link>
                   <router-link to="/England#products">Англия</router-link>
             
-            
             </nav>
 
             <div class="footer-news">
@@ -74,7 +73,6 @@
 
 <script setup>
 import MyLogo from '../MyLogo.vue';
-
 
 </script>
 

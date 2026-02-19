@@ -5,16 +5,16 @@
             <header class="modal-header">           
              <h2>Ваш заказ</h2>
              <button @click="$emit('close')">
-                <img class="modal-close-btn" src="/public/close-btn.svg" alt="">
+                <img class="modal-close-btn" src="/public/close-btn.svg" alt="Закрыть" title="Закрыть">
              </button>
             </header>
             <div class="modal-main">
-            <OrderItems/>
-              
+            <div class="empty" v-if="sumOfOrders == 0">Корзина пуста((</div>
+              <OrderItems/>
             </div>
             <footer class="modal-footer">
-            <div>Итого:</div>
-            <button>Оплатить</button>
+               <div>Итого: {{ sumOfOrders }} руб</div>
+               <button>Оплатить</button>
             </footer>
         </section>
 
@@ -23,6 +23,21 @@
 </template>
 
 <script setup>
+import OrderItems from '../OrderItems.vue';
+import { useBasketStore } from '@/basketStore';
+import { computed } from 'vue';
+
+const orders = useBasketStore().orders
+
+const sumOfOrders = computed(() => {
+
+   return orders.reduce((sum, item) => {
+
+     return sum + parseInt(item.price.replace(" ", ""))
+
+    }, 0)
+
+})
 
   defineProps({
 
@@ -51,7 +66,9 @@
 }
 
 .modal-box {
-  width: 300px;
+  width: 460px;
+  max-height: 600px;
+  overflow-y: auto;
   margin: auto;
   padding: 20px 30px;
   background-color: #fff;
@@ -90,9 +107,28 @@
     height: 20px;
 }
 
+.empty {
+
+  padding-top: 40px;
+  justify-self: center;
+  color: $main-gray;
+
+}
+
 .modal-footer {
   display: flex;
+  line-height: 1.5;
+  justify-content: space-between;
   border-top: 2px solid $main-green;
+  padding-top: 5px;
+
+  button {
+
+    color: $main-black;
+    background-color: $light-green;
+    padding: 10px 7px;
+    border-radius: 10px;
+  }
 
 }
 

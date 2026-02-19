@@ -6,12 +6,15 @@
             <div class="item-name">{{ item.name}}</div>
             <div class="item-details">{{item.details}}</div>
             <div class="item-price">{{item.price}} руб</div>
-            <!-- <button @click="addOrder(item)" class="item-button">В корзину</button> -->
+            <button @click="addOrder(item)" class="item-button">В корзину</button>
         </div>
     </div>
 </template>
 
 <script setup>
+import { useBasketStore } from '@/basketStore';
+
+const stores = useBasketStore()
 
 const props = defineProps({
     item: {
@@ -20,15 +23,13 @@ const props = defineProps({
     }
 })
 
-// const orders = []
+function addOrder(item) {
+    if(!stores.orders.includes(item)) {
+        
+       stores.orders.push(item)
+    }
 
-// function addOrder(item) {
-//     const orders = []
-//     orders.push(item)
-//     console.log(item)
-//     console.log(orders)
-// }
-
+}
 
 </script>
 
@@ -92,6 +93,12 @@ const props = defineProps({
         border: $main-green 1px solid;
         padding: 21px 106px;
         white-space: nowrap;
+        transition: all 0.3s ease;
+
+        &:active {
+            color: $light-green;
+            background-color: $main-green;
+        }
     }
 
 }

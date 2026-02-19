@@ -1,7 +1,7 @@
 <template>
 
 <div class="products-items">
-<MainProductItem :item="item" v-for="item in england" :key="item.name" />
+<MainProductItem :item="item" v-for="item in england" :key="item.name"/>
 </div>
 </template>
 
