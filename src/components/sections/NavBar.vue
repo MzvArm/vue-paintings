@@ -38,6 +38,7 @@ const show = ref(false)
 
 <style lang="scss" scoped>
 @use '/src/styles/variables' as *;
+@use '/src/styles/mixins' as *;
 
 .header {
     background-color: $light-green;
@@ -57,10 +58,12 @@ padding: 33px 485px 32px 165px;
 }
 
 .nav-menu {
+
+    @include display(flex, $gap: 0 75px);
     position: relative;
-    display: flex;
+    // display: flex;
     align-items: center;
-    column-gap: 75px;
+    // column-gap: 75px;
     padding: 38px 167px 38px 0;
     color: $main-black;
 
@@ -90,13 +93,15 @@ padding: 33px 485px 32px 165px;
 }
 
 .notifications {
+
+    @include fs-and-colors(10px, $bg-color: $main-white);
     position: absolute;
     top: 0;
     right: 0;
     padding: 3px;
     border-radius: 7px;
-    background-color: $main-white;
-    font-size: 10px;
+    // background-color: $main-white;
+    // font-size: 10px;
 }
 
 

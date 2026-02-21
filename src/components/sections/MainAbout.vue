@@ -6,9 +6,9 @@
             <div class="about-us-title">Наша команда</div>
             <div class="about-us-text">Мы верим, что великое искусство должно быть доступно каждому, независимо от того, в какой точке мира вы находитесь.  Также мы тщательно подходим к подбору полотен, чтобы каждая реплика сохраняла характер и энергетику оригинала, превращая ваш дом в персональную галерею.</div>
             <div class="about-us-photos">
-                <img class="about-us-photo" src="/public/about-us-photo.png" alt="Фото художника" title="фото команды">
-                <img class="about-us-photo" src="/public/about-us-photo-2.png" alt="Фото основателя" title="фото команды">
-                <img class="about-us-photo" src="/public/about-us-photo-3.png" alt="Фото менеджера" title="фото команды">
+                <img class="about-us-photo" src="/public/about-us-photo.webp" alt="Фото художника" title="фото команды">
+                <img class="about-us-photo" src="/public/about-us-photo-2.webp" alt="Фото основателя" title="фото команды">
+                <img class="about-us-photo" src="/public/about-us-photo-3.webp" alt="Фото менеджера" title="фото команды">
             </div>
         </div>
     </section>

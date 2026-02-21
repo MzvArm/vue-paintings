@@ -36,6 +36,7 @@ function addOrder(item) {
 <style lang="scss" scoped>
 
 @use '/src/styles/variables' as *;
+@use '/src/styles/mixins' as *;
 
 .item {
 
@@ -59,16 +60,18 @@ function addOrder(item) {
 
     &-author {
 
-        font-size: $text;
-        color: $main-gray;
+        @include fs-and-colors($text, $main-gray);
+        // font-size: $text;
+        // color: $main-gray;
         margin-bottom: 10px;
 
     }
 
     &-name {
 
-        color: $main-black;
-        font-size: 30px;
+        @include fs-and-colors(30px, $main-black);
+        // color: $main-black;
+        // font-size: 30px;
         margin-bottom: 10px;
 
     }
@@ -80,24 +83,29 @@ function addOrder(item) {
     }
 
     &-price {
-        color: $main-green;
-        font-size: 24px;
+
+        @include fs-and-colors(24px, $main-green);
+        // color: $main-green;
+        // font-size: 24px;
         margin-bottom: 20px;
     }
 
     &-button {
 
-        font-size: $big-text;
-        color: $main-green;
-        background-color: transparent;
+        @include fs-and-colors($big-text, $main-green, transparent);
+        // font-size: $big-text;
+        // color: $main-green;
+        // background-color: transparent;
         border: $main-green 1px solid;
         padding: 21px 106px;
         white-space: nowrap;
         transition: all 0.3s ease;
 
         &:active {
-            color: $light-green;
-            background-color: $main-green;
+
+            @include fs-and-colors($font-color: $light-green, $bg-color: $main-green);
+            // color: $light-green;
+            // background-color: $main-green;
         }
     }
 

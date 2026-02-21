@@ -20,7 +20,7 @@ const router = createRouter({
 
     scrollBehavior(to) {
 
-        if (to.hash) {  
+        if (to.hash) {
 
 
             // Очищаем хэш при переходе
@@ -33,7 +33,7 @@ const router = createRouter({
             history.replaceState({}, "", location.pathname)
 
             return {
-                
+
                 el: to.hash,
                 top: 100,
                 behavior: 'smooth'

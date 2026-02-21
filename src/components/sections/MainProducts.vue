@@ -38,6 +38,7 @@ const currentPath = computed(() => route.path)
 <style lang="scss" scoped>
 
 @use '/src/styles/variables' as *;
+@use '/src/styles/mixins' as *;
 
 .products {
 
@@ -64,20 +65,23 @@ const currentPath = computed(() => route.path)
 
 .products-navigation {
 
+
 align-content: center;
-display: flex;
-column-gap: 32px;
+@include display(flex, $gap: 0 32px);
+// display: flex;
+// column-gap: 32px;
 
     .button {
 
-        color: $main-black;
+        @include fs-and-colors ($big-text, $main-black, $middle-green);
+        // color: $main-black;
         font-family: $font;
         text-decoration: none;
         padding: 10px 20px;
-        font-size: $big-text;
+        // font-size: $big-text;
         border-radius: 55px;
         border: none;
-        background-color: $middle-green;
+        // background-color: $middle-green;
 
     }
 
@@ -88,8 +92,9 @@ column-gap: 32px;
 
     .current-button {
 
-        color: $main-white;
-        background-color: $button-green;
+        @include fs-and-colors($font-color: $main-white, $bg-color: $button-green);
+        // color: $main-white;
+        // background-color: $button-green;
     }
 
     .current-button:hover {

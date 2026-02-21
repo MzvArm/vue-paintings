@@ -1,0 +1,13 @@
+@mixin fs-and-colors ($size:null, $font-color:null, $bg-color:null){
+    font-size: $size;
+    color: $font-color;
+    background-color: $bg-color;
+}
+
+@mixin display ($display, $direction:null, $template:null, $gap:null) {
+    display: $display;
+    flex-direction: $direction;
+    gap: $gap;
+    grid-template: $template;
+
+}

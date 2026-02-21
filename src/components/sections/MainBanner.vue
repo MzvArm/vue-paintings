@@ -20,6 +20,7 @@
 
 <style lang="scss" scoped>
 @use '/src/styles/variables' as *;
+@use '/src/styles/mixins' as *;
 
 .banner {
     display: flex;
@@ -44,26 +45,31 @@
     }
 
     &-button {
-        background-color: transparent;
+
+        @include fs-and-colors($big-text, $main-green, transparent);
+        // background-color: transparent;
         border: $main-green 1px solid;
-        color: $main-green;
-        font-size: $big-text;
+        // color: $main-green;
+        // font-size: $big-text;
         font-family: $font;
         padding: 21px 60px;
         transition: all 0.3s ease;
 
             &:active {
-            color: $light-green;
-            background-color: $main-green;
+                @include fs-and-colors($font-color: $light-green, $bg-color: $main-green);
+            // color: $light-green;
+            // background-color: $main-green;
         }
     }
 
 }
 
 .banner-title {
+
+    @include fs-and-colors (60px, $main-black);
     line-height: 1.1;
-    font-size: 60px;
-    color: $main-black;
+    // font-size: 60px;
+    // color: $main-black;
     margin-bottom: 20px;
 
         span {  

@@ -1,6 +1,6 @@
 <template>
     <Transition name="modal">
-    <div class="modal-background" v-if="show">
+    <div class="modal-background" v-if="show" @click.self="$emit('close')">
         <section class="modal-box">
             <header class="modal-header">           
              <h2>Ваш заказ</h2>
@@ -25,7 +25,18 @@
 <script setup>
 import OrderItems from '../OrderItems.vue';
 import { useBasketStore } from '@/basketStore';
-import { computed } from 'vue';
+import { computed, onMounted } from 'vue';
+
+const emit = defineEmits(['close'])
+
+onMounted(() => {
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      emit('close')
+    }
+})
+
+})
 
 const orders = useBasketStore().orders
 

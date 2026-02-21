@@ -21,6 +21,7 @@
 <style lang="scss" scoped>
 
 @use '/src/styles/variables' as *;
+@use '/src/styles/mixins' as *;
 
 .new-banner {
     width: 1440px;
@@ -35,11 +36,15 @@
     }
 
     &-header {
-        display: flex;
-        column-gap: 20px;
-        color: $main-white;
+
+        @include display (flex, $gap: 0 20px);
+        // display: flex;
+        // column-gap: 20px;
+        @include fs-and-colors($large-text, $main-white);
+
+        // color: $main-white;
         width: 521px;
-        font-size: $large-text;
+        // font-size: $large-text;
         margin-bottom: 20px;
 
     }
@@ -60,10 +65,11 @@
 
     &-button {
 
-        color: $main-black;
-        font-size: $big-text;
+        @include fs-and-colors($big-text, $main-black, #EEDB6D);
+        // color: $main-black;
+        // font-size: $big-text;
         padding: 21px 60px;
-        background-color: #EEDB6D;
+        // background-color: #EEDB6D;
 
     }
 

@@ -35,13 +35,16 @@ const france = [
 </script>
 
 <style lang="scss">
+@use '/src/styles/mixins' as *;
 
   .products-items {
 
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(2,auto);
-    gap: 30px;
+    @include display(grid, $template: repeat(2, auto) / repeat(3, auto), $gap: 30px);
+  
+    // display: grid;
+    // grid-template-columns: repeat(3, auto);
+    // grid-template-rows: repeat(2,auto);
+    // gap: 30px;
 
     }
 
