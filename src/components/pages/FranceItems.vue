@@ -40,11 +40,6 @@ const france = [
   .products-items {
 
     @include display(grid, $template: repeat(2, auto) / repeat(3, auto), $gap: 30px);
-  
-    // display: grid;
-    // grid-template-columns: repeat(3, auto);
-    // grid-template-rows: repeat(2,auto);
-    // gap: 30px;
 
     }
 

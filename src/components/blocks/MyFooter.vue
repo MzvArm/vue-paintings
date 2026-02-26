@@ -41,7 +41,8 @@ import MyLogo from '../MyLogo.vue';
 
         display: flex;
         margin: 0 auto;
-        width: 1440px;
+        // width: 1440px;
+        max-width: 1440px;
 
     }
 

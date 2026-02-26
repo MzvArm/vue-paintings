@@ -16,7 +16,7 @@
 
             <router-view id="products" v-slot="{ Component }">
               <transition name="slide-fade" mode="out-in">
-               <component :is="Component" />
+               <component :is="Component" class="component" />
               </transition>
             </router-view>
     </section>
@@ -42,7 +42,8 @@ const currentPath = computed(() => route.path)
 
 .products {
 
-    width: 1110px;
+    // box-sizing: border-box;
+    max-width: 1110px;
     margin: 0 auto;
     margin-bottom: 70px;
 
@@ -66,7 +67,7 @@ const currentPath = computed(() => route.path)
 .products-navigation {
 
 
-align-content: center;
+// align-content: center;
 @include display(flex, $gap: 0 32px);
 // display: flex;
 // column-gap: 32px;
@@ -117,6 +118,229 @@ align-content: center;
 .slide-fade-leave-to {
   transform: translateX(20px);
   opacity: 0;
+}
+
+@media(max-width: 1200px) {
+
+    .products-header {
+        justify-content: center;
+    }
+
+    .products-title {
+        margin-right: 25vw;
+        margin-left: 20px;
+    }
+
+    .products-items {
+        justify-content: center;
+    }
+
+    .component:deep(.item) {
+
+        width: 270px;
+        height: 580px;
+
+        .item-img {
+            width: 230px;
+            height: 316px;
+        }
+
+        .item-author {
+            font-size: 16px;
+        }
+
+        .item-name {
+            font-size: 26px;
+        }
+
+        .item-details {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .item-price {
+            font-size: 22px;
+        }
+
+        .item-button {
+            font-size: 18px;
+            padding: 18px 70px;
+        }
+
+    }
+}
+
+@media (max-width: 1000px ) {
+
+    .products-items {
+        grid-template: repeat(3, auto) / repeat(2, auto);
+        gap: 60px;
+    }
+
+
+    .products-title {
+        font-size: 4vw;
+        margin-right: 13vw;
+        margin-left: 20px;
+    }
+
+     .component:deep(.item) {
+
+        width: auto;
+        height: auto;
+        
+        .item-img {
+            width: 270px;
+            height: 369px;
+        }
+
+        .item-button {
+            padding: 18px 91px;
+        }
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .products-title {
+    margin-right: 7vw;
+    align-self: center;
+    }
+
+    .products-navigation  {
+
+        column-gap: 3vw;
+
+        .button {
+        font-size: max(16px, 2.25vw);
+        }
+    }   
+
+    .products-items {
+        gap: 30px;
+    }
+
+    .component:deep(.item) {
+
+        .item-wrapper {
+            padding: 15px;
+        }
+
+        .item-img {
+        width: 230px;
+        height: 316px;
+        }
+
+        .item-button {
+        font-size: 18px;
+        padding: 18px 70px;
+        }
+
+
+    }
+}
+
+@media (max-width: 600px) {
+
+    .products-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .products-title {
+        font-size: 22px;
+        align-self: start;
+    }
+
+    .products-navigation {
+        
+        margin-left: 20px;
+
+        .button {
+            font-size: max(14px, 2.67vw);
+        }
+
+    }
+
+    .products-items {
+        gap: 20px;
+    }
+
+    .component:deep(.item) {
+
+        .item-wrapper {
+            padding: 10px;
+        }
+
+        .item-img {
+            width: 190px;
+            height: 262px;
+        }
+
+        .item-author {
+            font-size: 14px;
+        }
+
+        .item-name {
+            font-size: 22px;
+        }
+
+        .item-details {
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .item-price {
+            font-size: 20px;
+        }
+
+        .item-button {
+            font-size: 16px;
+            padding: 15px 55px;
+        }
+
+    }
+
+}
+
+@media (max-width: 470px) {
+
+    .products-items {
+        grid-template: auto / auto;
+    }
+
+    .component:deep(.item) {
+
+        .item-img {
+            width: 230px;
+            height: 316px;
+        }
+
+        .item-author {
+            font-size: 16px;
+        }
+
+        .item-name {
+            font-size: 26px;
+        }
+
+        .item-details {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .item-price {
+            font-size: 22px;
+        }
+
+        .item-button {
+            font-size: 18px;
+            padding: 18px 70px;
+        }
+
+    }
+
 }
 
 </style>

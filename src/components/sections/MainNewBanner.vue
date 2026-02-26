@@ -24,7 +24,8 @@
 @use '/src/styles/mixins' as *;
 
 .new-banner {
-    width: 1440px;
+    max-width: 1440px;
+    // width: 1440px;
     height: 634px;
 
     background-image: url('/src/assets/new-banner.jpg');

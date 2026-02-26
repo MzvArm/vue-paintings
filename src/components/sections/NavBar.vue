@@ -45,15 +45,17 @@ const show = ref(false)
 }
 
 .nav-bar {
-    width: 1440px;
+    max-width: 1440px;
     display: flex;
     font-size: 20px;
     margin: 0 auto;
+    white-space: nowrap;
+    justify-content: center;
 }
 
 .nav-logo {
 
-padding: 33px 485px 32px 165px;
+padding: 33px 485px 32px min(11.46vw, 165px);
 
 }
 
@@ -61,20 +63,18 @@ padding: 33px 485px 32px 165px;
 
     @include display(flex, $gap: 0 75px);
     position: relative;
-    // display: flex;
     align-items: center;
-    // column-gap: 75px;
-    padding: 38px 167px 38px 0;
+    padding: 38px 223px 38px 0;
     color: $main-black;
 
 }
 
 .basket-wrapper {
     position: absolute;
-    right: 45px;
+    right: 110px;
     top: 28px;
     height: 3500px;    
-
+    pointer-events: none;
 }
 
 .basket-button {
@@ -84,6 +84,7 @@ padding: 33px 485px 32px 165px;
     background-color: $light-green;
     padding: 10px 10px 6px 8px;
     border-radius: 50%;
+    pointer-events: auto;
 }
 
 .basket-img {
@@ -100,8 +101,128 @@ padding: 33px 485px 32px 165px;
     right: 0;
     padding: 3px;
     border-radius: 7px;
-    // background-color: $main-white;
-    // font-size: 10px;
+
+}
+
+@media (max-width: 1439px) {
+
+    .nav-logo {
+    padding: 33px 32vw 32px 10vw;
+    }
+
+    .nav-menu {
+        padding-right: 180px;
+    }
+
+    .basket-wrapper {
+        right: 70px;
+    }
+
+}
+
+@media (max-width: 1300px) {
+
+    .nav-logo{
+    // padding-right: 23vw;
+    padding-left: 9vw;
+
+    // // Альтернативный центированный вариант
+    // padding-right: 13vw;
+    // padding-left: 22.53vw;
+    }
+
+    .nav-menu {
+    padding-right: 100px;
+    column-gap: 60px;
+    }
+
+    .basket-wrapper{
+        right: 16px;
+    }
+}
+
+@media(max-width: 1100px) {
+    .nav-logo {
+        padding-right: 26vw;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .nav-logo {
+        padding-right:  11.5vw;
+        padding-left: 11vw ;
+    }
+
+    .nav-menu {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 800px) {
+        
+    .nav-menu {
+        font-size: 2.25vw;
+        column-gap: 50px;
+        padding-right: 90px;
+    }
+
+    .nav-logo {
+        font-size: 2.5vw;
+        padding-left: 40px;
+        padding-right: 10vw;
+
+        &:deep(img) {
+            height: 4.38vw;
+            width: 4.38vw;
+        }
+    }
+
+    .basket-img {
+        height: 3vw;
+        width: 3vw;
+    }
+        
+}
+
+@media(max-width: 600px) {
+
+    .nav-bar {
+        flex-direction: column;
+    }
+
+    .nav-logo {
+        padding: 20px 0 10px 0;
+        font-size: max(14px, 2.5vw);
+          &:deep(img) {
+            height: max(4.38vw, 20px);
+            width: max(4.38vw, 20px);
+        }
+    }
+
+    .nav-menu {
+        column-gap: 40px;
+        font-size: max(2.25vw, 12px);
+        border-top: 2px solid $main-green;
+        padding: 11px 50px 20px 0;
+        margin: 0 auto;
+    }
+
+    .basket-wrapper {
+        top: 0;
+        right: -5px;
+    }
+
+    .basket-button {
+        position: static;
+    }
+
+    .basket-img {
+        height: max(15px, 3vw);
+        width: max(15px, 3vw);
+    }
+
 }
 
 

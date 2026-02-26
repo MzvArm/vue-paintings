@@ -47,7 +47,7 @@ function addOrder(item) {
 
     &-wrapper {
 
-    padding: 20px 20px 30px;
+    padding: 20px;
     }
 
 

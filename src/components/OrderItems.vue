@@ -1,6 +1,7 @@
 <template>
     <div>
         <div class="order-items" >
+        <TransitionGroup name="item">
          <div class="order-item" v-for="(item, index) in orders" :key="item.name">
             <img class="item-img" :src="item.img" alt="">
             <div class="wrapper">
@@ -12,6 +13,7 @@
                  <div class="item-price">{{item.price}} руб</div>
             </div>
          </div> 
+         </TransitionGroup>
     </div>
     </div>
 
@@ -81,7 +83,22 @@ const orders = useBasketStore().orders
     .delete-btn-img {
         width: 13px;
     }
+    }
+
+.item-move,
+.item-enter-active,
+.item-leave-active {
+  transition: all 0.3s ease;
 }
 
+.item-enter-from,
+.item-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.item-leave-active {
+  position: absolute;
+}
 
 </style>
