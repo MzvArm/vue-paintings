@@ -1,11 +1,14 @@
 <template>
     <div>
         <div class="order-items" >
+        <!-- Добавляем плавности для элементов в корзине -->
         <TransitionGroup name="item">
          <div class="order-item" v-for="(item, index) in orders" :key="item.name">
+            <!-- Добавляем привязку к источнику картинки через директиву v-bind -->
             <img class="item-img" :src="item.img" alt="">
             <div class="wrapper">
                  <div class="item-name">{{ item.name}}</div>
+                 <!-- Добавляем возможноть удаления товара из корзины (массива) -->
                  <button @click="orders.splice(index, 1)" class="item-btn" >
                     <img class="delete-btn-img" src="/public/close-btn.svg" alt="Удалить" title="Удалить">
                  </button>
@@ -22,6 +25,7 @@
 <script setup>
 import { useBasketStore } from '@/basketStore';
 
+// Берём состояние из стора
 const orders = useBasketStore().orders
 
 </script>
@@ -32,48 +36,31 @@ const orders = useBasketStore().orders
 @use '/src/styles/mixins' as *;
 
 .wrapper {
-
     @include display(grid, $template: 1fr 1fr / 1fr 1fr);
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
-    // grid-template-rows: 1fr 1fr;
     width: 100%;
     align-items: center;
 }
 
 .order-items {
-
     @include display(flex, column, $gap: 20px 0);
-    // display: flex;
-    // flex-direction: column;
-    // row-gap: 20px;
     padding: 20px 0;
-
 }
 
 .order-item {
 
     @include display(flex, $gap: 10px);
-    // display: flex;
-    // gap: 10px;
 
     .item-img {
-
         width: 50px;
         height: 68px;
     }
 
     .item-btn {
-
         justify-self: end;
-
     }
 
     .item-author {
-
         @include fs-and-colors($text, $main-gray);
-        // color: $main-gray;
-        // font-size: $text;
     }
 
     .item-price {
@@ -83,7 +70,7 @@ const orders = useBasketStore().orders
     .delete-btn-img {
         width: 13px;
     }
-    }
+}
 
 .item-move,
 .item-enter-active,

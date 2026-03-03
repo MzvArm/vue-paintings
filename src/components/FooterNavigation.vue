@@ -2,7 +2,7 @@
 <div class="footer-navigation">
 
     <nav class="footer-paintings">
-
+        <!-- Навигация якорь + переход на нужную страницу -->
         <div class="footer-sections">Репродукции</div>
         <router-link to="/#products">Франция</router-link>
         <router-link to="/Germany#products">Германия</router-link>
@@ -37,36 +37,29 @@
 @use '/src/styles/variables' as *;
 @use '/src/styles/mixins' as *;
 
-    .footer {
+.footer {
 
-        &-navigation {
+    &-navigation {
 
-            @include display(flex, $gap: 0 60px);
-            // display: flex;
-            // column-gap: 60px;
+        @include display(flex, $gap: 0 60px);
+        color: $main-gray;
+        line-height: 1.5;
+        padding: 23px 230px 23px 0;
+
+    }
+
+    &-paintings {
+        
+        @include display(flex, column);
+
+        a {
             color: $main-gray;
-            line-height: 1.5;
-            padding: 23px 248px 23px 0;
-        }
-
-        &-paintings {
-
-            @include display(flex, column);
-            // display: flex;
-            // flex-direction: column;
-
-            a {
-                color: $main-gray;
-            }
-
-        }
-
-        &-sections {
-
-            @include fs-and-colors($big-text, $main-black);
-            // font-size: $big-text;
-            // color: $main-black;
         }
     }
+
+    &-sections {
+        @include fs-and-colors($big-text, $main-black);
+    }
+}
 
 </style>

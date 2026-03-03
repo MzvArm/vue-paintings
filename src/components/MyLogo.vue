@@ -1,4 +1,5 @@
 <template>
+    <!-- Навигация на главную страницу -->
     <router-link to="/" class="nav-logo">
         <img src="/public/logo.svg" alt="лого в виде звезды" title="звезда">
         
@@ -20,18 +21,13 @@
     column-gap: 8px;
     align-self: center;
 
-
-
     div {
-
         align-self: center;
         font-weight: 700;
         color: $main-green;
-
     }
 
     img {
-
         height: 35px;
         width: 35px;
     }

@@ -42,68 +42,54 @@ const currentPath = computed(() => route.path)
 
 .products {
 
-    // box-sizing: border-box;
     max-width: 1110px;
     margin: 0 auto;
     margin-bottom: 70px;
 
     &-header {
-
-    display: flex;
-    color: $main-black;
-    margin-bottom: 30px;
-
+        display: flex;
+        color: $main-black;
+        margin-bottom: 30px;
     }
 
     &-title {
-
-    font-size: $large-text;
-    line-height: 1.1;
-    margin-right: 422px;
+        font-size: $large-text;
+        line-height: 1.1;
+        margin-right: 422px;
     }
-
 }
 
 .products-navigation {
 
-
-// align-content: center;
-@include display(flex, $gap: 0 32px);
-// display: flex;
-// column-gap: 32px;
+    @include display(flex, $gap: 0 32px);
 
     .button {
 
         @include fs-and-colors ($big-text, $main-black, $middle-green);
-        // color: $main-black;
         font-family: $font;
         text-decoration: none;
         padding: 10px 20px;
-        // font-size: $big-text;
         border-radius: 55px;
         border: none;
-        // background-color: $middle-green;
 
-    }
-
-    .button:hover {
-        transition: 0.5s;
-        transform: scale(1.1);
     }
 
     .current-button {
-
         @include fs-and-colors($font-color: $main-white, $bg-color: $button-green);
-        // color: $main-white;
-        // background-color: $button-green;
     }
 
-    .current-button:hover {
+    /* Выставляем условия чтобы hover срабатывал "только на ПК" */
+    @media (hover:hover) and (pointer: fine) {
 
-        transform: none;
+        .button:hover {
+            transition: 0.5s;
+            transform: scale(1.1);
+        }
 
+        .current-button:hover {
+            transform: none;
+        }
     }
-
 }
 
 .slide-fade-enter-active {
@@ -177,7 +163,6 @@ const currentPath = computed(() => route.path)
         gap: 60px;
     }
 
-
     .products-title {
         font-size: 4vw;
         margin-right: 13vw;
@@ -213,7 +198,7 @@ const currentPath = computed(() => route.path)
         column-gap: 3vw;
 
         .button {
-        font-size: max(16px, 2.25vw);
+            font-size: max(16px, 2.25vw);
         }
     }   
 
@@ -236,8 +221,6 @@ const currentPath = computed(() => route.path)
         font-size: 18px;
         padding: 18px 70px;
         }
-
-
     }
 }
 
@@ -260,7 +243,6 @@ const currentPath = computed(() => route.path)
         .button {
             font-size: max(14px, 2.67vw);
         }
-
     }
 
     .products-items {
@@ -299,9 +281,7 @@ const currentPath = computed(() => route.path)
             font-size: 16px;
             padding: 15px 55px;
         }
-
     }
-
 }
 
 @media (max-width: 470px) {
@@ -338,9 +318,7 @@ const currentPath = computed(() => route.path)
             font-size: 18px;
             padding: 18px 70px;
         }
-
     }
-
 }
 
 </style>

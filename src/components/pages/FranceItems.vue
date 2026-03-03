@@ -38,9 +38,7 @@ const france = [
 @use '/src/styles/mixins' as *;
 
   .products-items {
-
     @include display(grid, $template: repeat(2, auto) / repeat(3, auto), $gap: 30px);
-
     }
 
 </style>

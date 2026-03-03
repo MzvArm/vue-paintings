@@ -22,6 +22,7 @@
 @use '/src/styles/mixins' as *;
 
 .banner {
+
     display: flex;
     margin: 0 auto 70px; 
     max-width: 1440px;
@@ -97,9 +98,9 @@
     }
 
     .banner-img {
-    height: 49.48vw;
-    width: 42.97vw;
-    padding-left: 7.46vw;
+        height: 49.48vw;
+        width: 42.97vw;
+        padding-left: 7.46vw;
     }
 
     .banner-title {
@@ -109,7 +110,6 @@
     .banner-subscription {
         font-size: 2vw;
         padding-right: 7.46vw;
-        // background-color: aqua;
     }
 
     .banner-button {
@@ -120,7 +120,6 @@
     .banner-text {
         margin-bottom: 35px;
     }
-    
 }
 
 @media (max-width: 600px) {
@@ -153,7 +152,6 @@
     }
 
     .banner-subscription {
-        // padding-inline: 4.69vw;
         max-width: 290px;
         margin: 0 auto;
         padding-right: 0;

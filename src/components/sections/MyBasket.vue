@@ -1,5 +1,7 @@
 <template>
+  <!-- Добавляем плавности модальному окну -->
     <Transition name="modal">
+    <!-- Переключатель модального окна и закрытие по клику вне его области-->
     <div class="modal-background" v-if="show" @click.self="$emit('close')">
         <section class="modal-box">
             <header class="modal-header">           
@@ -9,6 +11,7 @@
              </button>
             </header>
             <div class="modal-main">
+            <!-- Высвечиваем текст если массив с заказами пуст (сумма заказов = 0) -->
             <div class="empty" v-if="sumOfOrders == 0">Корзина пуста((</div>
               <OrderItems/>
             </div>
@@ -27,8 +30,10 @@ import OrderItems from '../OrderItems.vue';
 import { useBasketStore } from '@/basketStore';
 import { computed, onMounted } from 'vue';
 
+// Объявляем emit
 const emit = defineEmits(['close'])
 
+// Закрытие модального окна по кнопке 'Esc'
 onMounted(() => {
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
@@ -38,8 +43,10 @@ onMounted(() => {
 
 })
 
+// Берём состояние из стора
 const orders = useBasketStore().orders
 
+// Высчитываем сумму заказа
 const sumOfOrders = computed(() => {
 
    return orders.reduce((sum, item) => {
@@ -50,6 +57,7 @@ const sumOfOrders = computed(() => {
 
 })
 
+// Принимаем пропс для открытия/закрытия модального окна
   defineProps({
 
     show: {
@@ -65,20 +73,24 @@ const sumOfOrders = computed(() => {
 @use "/src/styles/variables" as *;
 
 .modal-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 200;
-    display: flex;
-    transition: opacity 0.3s ease;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 200;
+  display: flex;
+  transition: opacity 0.3s ease;
+
 }
 
 .modal-box {
-  width: 460px;
-  max-height: 600px;
+
+  box-sizing: border-box;
+  width: 520px;
+  max-height: 640px;
   overflow-y: auto;
   margin: auto;
   padding: 20px 30px;
@@ -86,8 +98,8 @@ const sumOfOrders = computed(() => {
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
   transition: all 0.9s ease;
-}
 
+}
 
 .modal-enter-from {
   opacity: 0;
@@ -105,17 +117,16 @@ const sumOfOrders = computed(() => {
 
 .modal-header {
 
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 2px solid $main-green;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid $main-green;
 
 }
 
-
 .modal-close-btn {
 
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .empty {
@@ -127,6 +138,7 @@ const sumOfOrders = computed(() => {
 }
 
 .modal-footer {
+
   display: flex;
   line-height: 1.5;
   justify-content: space-between;
@@ -139,9 +151,8 @@ const sumOfOrders = computed(() => {
     background-color: $light-green;
     padding: 10px 7px;
     border-radius: 10px;
+
   }
-
 }
-
 
 </style>

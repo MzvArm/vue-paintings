@@ -22,7 +22,7 @@
 
 <style lang="scss" scoped>
 
-    .footer {
+.footer {
 
     &-messengers {
 
@@ -30,21 +30,18 @@
         column-gap: 30px;
         align-items: center;
         margin-bottom: 10px;
+
     }
 
     &-messenger {
-
         width: 24px;
         height: 24px;
-
     }
-    }
+}
 
-    .telegram {
-
-        width: 30px;
-        height: 30px;
-
-    }
+.telegram {
+    width: 30px;
+    height: 30px;
+}
 
 </style>

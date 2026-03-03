@@ -14,20 +14,20 @@
 @use '/src/styles/variables' as *;
 @use '/src/styles/mixins' as *;
 
-    .footer-contacts {
+.footer-contacts {
 
-        @include display (flex, column, $gap: 8px 0);
+    @include display (flex, column, $gap: 8px 0);
+    color: $main-black;
 
+    a {
+        white-space: nowrap;
         color: $main-black;
-
-        a {
-            color: $main-black;
-        }
-
-        adress {
-            line-height: 1.4;
-        }
-
     }
+
+    address {
+        white-space: nowrap;
+        line-height: 1.4;
+    }
+}
 
 </style>

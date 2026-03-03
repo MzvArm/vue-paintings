@@ -2,8 +2,8 @@
     <main>
         <MainBanner/>
         <MainProducts/>
-        <MainNewBanner v-if="false"/>
-        <MainAbout v-if="false"/>
+        <MainNewBanner/>
+        <MainAbout/>
     </main>
 </template>
 

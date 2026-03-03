@@ -13,12 +13,10 @@
 
 @use '/src/styles/variables' as *;
 
-    .trademark {
-
-        line-height: 1.7;
-        font-size: 12px;
-        color: $main-gray;
-
-    }
+.trademark {
+    line-height: 1.7;
+    font-size: 12px;
+    color: $main-gray;
+}
 
 </style>

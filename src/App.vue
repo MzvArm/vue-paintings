@@ -1,7 +1,7 @@
 <template>
 <MyHeader/>
 <MyMain/>
-<MyFooter v-if="false"/>
+<MyFooter/>
 </template>
 
 <script setup>
