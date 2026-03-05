@@ -169,9 +169,16 @@ const show = ref(false)
         height: 3900px;
     }
 
-    .modal:deep(.modal-box) {
-        width: 410px;
-        max-height: 540px;
+    .modal:deep() {
+
+        .modal-box {
+            width: 410px;
+            max-height: 540px;
+        }
+
+        .modal-main {
+            max-height: 430px;
+        }
     }
 }
 

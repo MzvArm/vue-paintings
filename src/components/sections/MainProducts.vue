@@ -102,7 +102,7 @@ const currentPath = computed(() => route.path)
 
 .slide-fade-enter-from,
 .slide-fade-leave-to {
-  transform: translateX(20px);
+  transform: translateY(20px);
   opacity: 0;
 }
 
@@ -229,17 +229,17 @@ const currentPath = computed(() => route.path)
     .products-header {
         flex-direction: column;
         gap: 15px;
+        align-items: center
     }
 
     .products-title {
         font-size: 22px;
-        align-self: start;
+        align-self: center;
+
     }
 
     .products-navigation {
         
-        margin-left: 20px;
-
         .button {
             font-size: max(14px, 2.67vw);
         }

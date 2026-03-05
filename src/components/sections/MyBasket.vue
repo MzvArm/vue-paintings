@@ -91,7 +91,7 @@ const sumOfOrders = computed(() => {
   box-sizing: border-box;
   width: 520px;
   max-height: 640px;
-  overflow-y: auto;
+  // overflow-y: auto;
   margin: auto;
   padding: 20px 30px;
   background-color: #fff;
@@ -123,8 +123,12 @@ const sumOfOrders = computed(() => {
 
 }
 
-.modal-close-btn {
+.modal-main {
+   overflow-y: auto;
+   max-height: 530px;
+}
 
+.modal-close-btn {
   width: 20px;
   height: 20px;
 }
