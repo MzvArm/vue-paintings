@@ -4,9 +4,9 @@
     <nav class="footer-paintings">
         <!-- Навигация якорь + переход на нужную страницу -->
         <div class="footer-sections">Репродукции</div>
-        <router-link to="/#products">Франция</router-link>
-        <router-link to="/Germany#products">Германия</router-link>
-        <router-link to="/England#products">Англия</router-link>
+        <router-link to="/vue-paintings#products">Франция</router-link>
+        <router-link to="/vue-paintings/Germany#products">Германия</router-link>
+        <router-link to="/vue-paintings/England#products">Англия</router-link>
 
     </nav>
 
