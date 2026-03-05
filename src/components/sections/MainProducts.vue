@@ -6,7 +6,7 @@
 
                 <!-- Добавляем кнопки для пагинации, подсвечиваем актуальную страницу -->
 
-                <router-link to="/vue-paintings" class="button" :class="{ 'current-button': route.path == '/vue-paintings'}">Франция</router-link>
+                <router-link to="/vue-paintings/" class="button" :class="{ 'current-button': route.path == '/vue-paintings/'}">Франция</router-link>
                 <router-link to="/vue-paintings/Germany" class="button" :class="{ 'current-button': route.path == '/vue-paintings/Germany'}">Германия</router-link>
                 <router-link to="/vue-paintings/England" class="button" :class="{ 'current-button': route.path == '/vue-paintings/England'}">Англия</router-link>
             </div>
