@@ -126,6 +126,7 @@ const sumOfOrders = computed(() => {
 .modal-main {
    overflow-y: auto;
    max-height: 530px;
+   padding-right: 10px;
 }
 
 .modal-close-btn {

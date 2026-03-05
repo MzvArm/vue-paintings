@@ -172,7 +172,7 @@ const show = ref(false)
     .modal:deep() {
 
         .modal-box {
-            width: 410px;
+            width: 420px;
             max-height: 540px;
         }
 
@@ -258,9 +258,13 @@ const show = ref(false)
     .modal:deep() {
 
         .modal-box {
-        width: max(320px, 68.33vw);
+        width: max(330px, 68.33vw);
         max-height: 480px;
         padding-inline: 20px;
+        }
+
+        .modal-main {
+            max-height: 370px;
         }
 
         .modal-header h2 {
