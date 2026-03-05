@@ -7,9 +7,9 @@ import GermanyItems from './components/pages/GermanyItems.vue'
 // Создаём маршруты
 
 const routes = [
-    { path: '/', component: FranceItems },
-    { path: '/England', component: EnglandItems },
-    { path: '/Germany', component: GermanyItems },
+    { path: '/vue-paintings', component: FranceItems },
+    { path: '/vue-paintings/England', component: EnglandItems },
+    { path: '/vue-paintings/Germany', component: GermanyItems },
 ]
 
 const router = createRouter({

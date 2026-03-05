@@ -1,6 +1,6 @@
 <template>
     <!-- Навигация на главную страницу -->
-    <router-link to="/" class="nav-logo">
+    <router-link to="/vue-paintings/" class="nav-logo">
         <img src="/public/logo.svg" alt="лого в виде звезды" title="звезда">
         
         <div>Ink. House</div>
