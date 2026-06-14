@@ -1,7 +1,7 @@
 <template>
     <div class="item">
         <div class="item-wrapper">
-            <img class="item-img" :src="item.img" alt="">
+            <img class="item-img" :src="item.img" alt="" loading="lazy">
             <div class="item-author">{{  item.author  }}</div>
             <div class="item-name">{{ item.name}}</div>
             <div class="item-details">{{item.details}}</div>

@@ -6,6 +6,10 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  server: {
+    host: true,
+    server: 5173,
+  },
   plugins: [
     vue(),
     vueDevTools(),
@@ -16,4 +20,5 @@ export default defineConfig({
     },
   },
   base: '/vue-paintings',
+  // base: '/',
 })

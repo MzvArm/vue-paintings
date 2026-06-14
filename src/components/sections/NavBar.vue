@@ -60,7 +60,8 @@ const show = ref(false)
 }
 
 .nav-logo {
-    padding: 33px 485px 32px min(11.46vw, 165px);
+    // padding: 33px 485px 32px min(11.46vw, 165px);
+    padding: 33px 485px 32px 160px;
 }
 
 .nav-menu {

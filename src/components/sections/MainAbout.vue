@@ -1,7 +1,7 @@
 <template>
     <section id="about-us" class="about-us">
         
-        <img class="about-us-img" src="/src/assets/about-us-pic.webp" alt="Изображение с рамкой" title="Рука дерижт кисточки на фоне рамки">
+        <img class="about-us-img" src="/src/assets/about-us-pic.webp" alt="Изображение с рамкой" title="Рука дерижт кисточки на фоне рамки" loading="lazy">
         <div class="about-us-description">
             <div class="about-us-title">Наша команда</div>
             <div class="about-us-text">Мы верим, что великое искусство должно быть доступно каждому, независимо от того, в какой точке мира вы находитесь.  Также мы тщательно подходим к подбору полотен, чтобы каждая реплика сохраняла характер и энергетику оригинала, превращая ваш дом в персональную галерею.</div>

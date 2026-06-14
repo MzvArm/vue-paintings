@@ -2,7 +2,7 @@
     <section id="new-banner" class="new-banner">
         <div class="new-banner-wrapper">
             <div class="new-banner-header">
-                <img class="new-banner-logo" src="/public/yellow-star.svg" alt="лого" title="жёлтая звезда">
+                <img class="new-banner-logo" src="/public/yellow-star.svg" alt="лого" title="жёлтая звезда" loading="lazy">
                 <h2 class="new-banner-title">Новая коллекция французских авторов</h2>
             </div>
             <div class="new-banner-text">Откройте для себя обновленную коллекцию картин, вдохновленную золотым веком французской живописи. В этом сезоне мы добавили знаковые работы импрессионистов и модернистов, чьи полотна навсегда изменили мир искусства.
